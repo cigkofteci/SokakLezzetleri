@@ -1,0 +1,52 @@
+içecek alim satımı gerçekleştirilecek{
+  içecek kayıt ekranı
+  içecek stoğa ekleme ekranı// içecek satin alindiğinda
+  içecek satiş ekranı
+  //  içecegin görünürlüğü ayarlanabilmeli
+  //  bilgiler güncellenebilmeli
+}
+
+
+
+yiyecek satişı gerçekleştirilecek
+yiyecekler malzemelerden oluşucak her yiyecek satıldığında malzemeler stoktan düşülecek
+malzeme alımı gerçekleştirilecek{
+  yiyecek kayıt ekranı //yiyecekler malzemelerden oluşuyor
+  malzeme kayıt ekranı
+  stoğa malzeme ekleme ekranı
+  yiyecek satiş ekranı
+  //  malzeme bozulabilir, açıklamalı stoktan düşme ekranı olmalı
+}
+
+
+
+elektrik, doğalgaz, su, kira, eleman maaşları ve diğer harcamalar tutulacak{
+  aylık giderler ekranı olacak
+  anlık yeni gider eklenebilmeli // açıklama olacak mesela eşya tamiri gerekti
+                                 // benzin gideri
+}
+
+
+
+günlük ve aylık kazanç tutulacak{
+  günlük kazançların görüldüğü ekran olacak
+
+  aylık kazançların görüldüğü ekran olacak
+  günlük ve aylık alım satım kazancı görülebilmeli
+}
+
+
+
+admin paneli ve yetkilendirme sistemi olmalı
+yeni üye eklenebilmeli{
+  kayıt ol ekranı
+  login ekranı
+  ///admin pane
+}
+
+
+
+satışlar gel_al veya sipariş şeklinde olabilir
+alım satımlarda ödeme şekli tutulmalı{
+  nakit, kredi, online, veresiye
+}

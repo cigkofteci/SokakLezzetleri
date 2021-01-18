@@ -1,0 +1,10 @@
+E:\repos\SokakLezzetleri\SokakLezzetleri\bin\Debug\SokakLezzetleri.exe.config
+E:\repos\SokakLezzetleri\SokakLezzetleri\bin\Debug\SokakLezzetleri.exe
+E:\repos\SokakLezzetleri\SokakLezzetleri\bin\Debug\SokakLezzetleri.pdb
+E:\repos\SokakLezzetleri\SokakLezzetleri\obj\Debug\SokakLezzetleri.csprojAssemblyReference.cache
+E:\repos\SokakLezzetleri\SokakLezzetleri\obj\Debug\SokakLezzetleri.icecekKayit.resources
+E:\repos\SokakLezzetleri\SokakLezzetleri\obj\Debug\SokakLezzetleri.Properties.Resources.resources
+E:\repos\SokakLezzetleri\SokakLezzetleri\obj\Debug\SokakLezzetleri.csproj.GenerateResource.cache
+E:\repos\SokakLezzetleri\SokakLezzetleri\obj\Debug\SokakLezzetleri.csproj.CoreCompileInputs.cache
+E:\repos\SokakLezzetleri\SokakLezzetleri\obj\Debug\SokakLezzetleri.exe
+E:\repos\SokakLezzetleri\SokakLezzetleri\obj\Debug\SokakLezzetleri.pdb

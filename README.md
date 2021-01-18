@@ -1,2 +1,3 @@
 # SokakLezzetleri
  
+iş kuralları eklenecek

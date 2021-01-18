@@ -1,0 +1,25 @@
+--
+--  Tablolar
+--
+
+--
+--  icecek tablosu oluşturma
+--
+
+CREATE TABLE "icecek" ( "id" INTEGER NOT NULL UNIQUE, "ad" TEXT NOT NULL, "satis_fiyati" TEXT NOT NULL, "stok_adedi" INTEGER NOT NULL, PRIMARY KEY("id" AUTOINCREMENT) )
+
+--
+--  icecek alim tablosu
+--
+
+CREATE TABLE "icecek_alim" ( "id" INTEGER NOT NULL UNIQUE, "icecek_id" INTEGER NOT NULL, "alinan_adet" INTEGER NOT NULL, "odenen_fiyat" TEXT NOT NULL, "alim_tarihi" TEXT NOT NULL, PRIMARY KEY("id" AUTOINCREMENT), FOREIGN KEY("icecek_id") REFERENCES "icecek"("id") )
+
+--
+--  
+--
+
+--
+--  Triggerlar
+--
+
+CREATE TRIGGER icecek_alindi AFTER INSERT ON "icecek_alim" BEGIN UPDATE icecek SET "stok_adedi" = "stok_adedi" + (select alinan_adet from icecek_alim where id=last_insert_rowid()) WHERE "id"=(select icecek_id from icecek_alim where id=last_insert_rowid()); END

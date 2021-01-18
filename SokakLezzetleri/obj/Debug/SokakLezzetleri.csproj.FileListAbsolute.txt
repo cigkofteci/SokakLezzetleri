@@ -8,3 +8,14 @@ E:\repos\SokakLezzetleri\SokakLezzetleri\obj\Debug\SokakLezzetleri.csproj.Genera
 E:\repos\SokakLezzetleri\SokakLezzetleri\obj\Debug\SokakLezzetleri.csproj.CoreCompileInputs.cache
 E:\repos\SokakLezzetleri\SokakLezzetleri\obj\Debug\SokakLezzetleri.exe
 E:\repos\SokakLezzetleri\SokakLezzetleri\obj\Debug\SokakLezzetleri.pdb
+E:\repos\SokakLezzetleri\SokakLezzetleri\bin\Debug\EntityFramework.dll
+E:\repos\SokakLezzetleri\SokakLezzetleri\bin\Debug\EntityFramework.SqlServer.dll
+E:\repos\SokakLezzetleri\SokakLezzetleri\bin\Debug\System.Data.SQLite.dll
+E:\repos\SokakLezzetleri\SokakLezzetleri\bin\Debug\System.Data.SQLite.EF6.dll
+E:\repos\SokakLezzetleri\SokakLezzetleri\bin\Debug\System.Data.SQLite.Linq.dll
+E:\repos\SokakLezzetleri\SokakLezzetleri\bin\Debug\EntityFramework.xml
+E:\repos\SokakLezzetleri\SokakLezzetleri\bin\Debug\EntityFramework.SqlServer.xml
+E:\repos\SokakLezzetleri\SokakLezzetleri\bin\Debug\System.Data.SQLite.xml
+E:\repos\SokakLezzetleri\SokakLezzetleri\obj\Debug\SokakLezzetleri.icecekSatinAlma.resources
+E:\repos\SokakLezzetleri\SokakLezzetleri\obj\Debug\SokakLezzetleri.icecekSatis.resources
+E:\repos\SokakLezzetleri\SokakLezzetleri\obj\Debug\SokakLezzetleri.csproj.CopyComplete

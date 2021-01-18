@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,12 @@ namespace SokakLezzetleri
         public icecekSatis()
         {
             InitializeComponent();
+
+            //baglanti.Open();
         }
+
+        //SQLiteConnection baglanti = new SQLiteConnection("Data Source=database/SokakLezzetleri.db");
+        ////bag.Open(); // Bağlantıyı Açtık
+
     }
 }

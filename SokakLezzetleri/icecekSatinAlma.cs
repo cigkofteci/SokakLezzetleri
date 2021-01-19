@@ -16,21 +16,69 @@ namespace SokakLezzetleri
         public icecekSatinAlma()
         {
             InitializeComponent();
-            dbIslemleri();
+            icecekleriCek();
         }
 
-        SQLiteConnection baglanti = new SQLiteConnection(@"Data Source=E:\repos\SokakLezzetleri\SokakLezzetleri\database\SokakLezzetleri.db");
-    
-        void dbIslemleri()
+        //SQLiteConnection baglanti = new SQLiteConnection(@"Data Source=E:\repos\SokakLezzetleri\SokakLezzetleri\database\SokakLezzetleri.db");
+        //SQLiteCommand komut;
+        //SQLiteDataReader read;
+        string dbYolu = @"Data Source=E:\repos\SokakLezzetleri\SokakLezzetleri\database\SokakLezzetleri.db";
+
+        void icecekleriCek()
         {
-            baglanti.Open();
-            SQLiteCommand komut = new SQLiteCommand("select * from icecek", baglanti);
-            SQLiteDataReader read = komut.ExecuteReader();
-            while (read.Read())
+            using (SQLiteConnection baglanti = new SQLiteConnection(dbYolu))
             {
-                cBoxIcecekAdi.Items.Add(read["ad"]);
+                baglanti.Open();
+                using (SQLiteCommand komut = new SQLiteCommand("select * from icecek", baglanti))
+                {
+                    using (SQLiteDataReader read = komut.ExecuteReader())
+                    {
+                        while (read.Read())
+                        {
+                            cBoxIcecekAdi.Items.Add(read["ad"]);
+                        }
+                    }
+                }
             }
         }
-        
+
+
+
+        private void btnAl_Click(object sender, EventArgs e)
+        {
+            using (SQLiteConnection baglanti = new SQLiteConnection(dbYolu))
+            {
+                baglanti.Open();
+                string sql = "insert into icecek_alim (icecek_id, alinan_adet ,odenen_fiyat,alim_tarihi) values (" 
+                    + (cBoxIcecekAdi.SelectedIndex + 1) + "," + Convert.ToInt32(mtBoxAlinanAdet.Text) 
+                    + ",'" + mtBoxOdenenFiyat.Text + "','" +DateTime.Now.ToString() +"')";
+                using (SQLiteCommand komut = new SQLiteCommand(sql, baglanti))
+                {
+                    komut.ExecuteNonQuery();
+                }
+            }
+        }
+
+        private void mtBoxOdenenFiyat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as MaskedTextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void mtBoxAlinanAdet_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

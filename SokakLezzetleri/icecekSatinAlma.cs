@@ -19,9 +19,6 @@ namespace SokakLezzetleri
             icecekleriCek();
         }
 
-        //SQLiteConnection baglanti = new SQLiteConnection(@"Data Source=E:\repos\SokakLezzetleri\SokakLezzetleri\database\SokakLezzetleri.db");
-        //SQLiteCommand komut;
-        //SQLiteDataReader read;
         string dbYolu = @"Data Source=E:\repos\SokakLezzetleri\SokakLezzetleri\database\SokakLezzetleri.db";
 
         void icecekleriCek()
@@ -41,8 +38,6 @@ namespace SokakLezzetleri
                 }
             }
         }
-
-
 
         private void btnAl_Click(object sender, EventArgs e)
         {

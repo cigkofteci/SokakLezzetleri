@@ -16,7 +16,7 @@ namespace SokakLezzetleri
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new icecekSatinAlma());
+            Application.Run(new icecekKayit());
         }
     }
 }

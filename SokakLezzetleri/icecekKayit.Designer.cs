@@ -32,18 +32,17 @@ namespace SokakLezzetleri
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tBoxIcecekAdi = new System.Windows.Forms.TextBox();
-            this.tBoxSatisFiyati = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEkle = new System.Windows.Forms.Button();
+            this.mtBoxSatisFiyati = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(51, 87);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(14, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 26);
+            this.label1.Size = new System.Drawing.Size(251, 34);
             this.label1.TabIndex = 0;
             this.label1.Text = "İÇECEĞİN ADI:";
             // 
@@ -51,51 +50,54 @@ namespace SokakLezzetleri
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(58, 148);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(23, 149);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(191, 26);
+            this.label2.Size = new System.Drawing.Size(242, 34);
             this.label2.TabIndex = 1;
             this.label2.Text = "SATIŞ FİYATI:";
             // 
             // tBoxIcecekAdi
             // 
             this.tBoxIcecekAdi.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBoxIcecekAdi.Location = new System.Drawing.Point(262, 84);
-            this.tBoxIcecekAdi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tBoxIcecekAdi.Location = new System.Drawing.Point(295, 70);
+            this.tBoxIcecekAdi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tBoxIcecekAdi.Name = "tBoxIcecekAdi";
-            this.tBoxIcecekAdi.Size = new System.Drawing.Size(76, 34);
+            this.tBoxIcecekAdi.Size = new System.Drawing.Size(281, 40);
             this.tBoxIcecekAdi.TabIndex = 2;
             // 
-            // tBoxSatisFiyati
+            // btnEkle
             // 
-            this.tBoxSatisFiyati.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBoxSatisFiyati.Location = new System.Drawing.Point(262, 143);
-            this.tBoxSatisFiyati.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tBoxSatisFiyati.Name = "tBoxSatisFiyati";
-            this.tBoxSatisFiyati.Size = new System.Drawing.Size(76, 34);
-            this.tBoxSatisFiyati.TabIndex = 3;
+            this.btnEkle.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold);
+            this.btnEkle.Location = new System.Drawing.Point(414, 124);
+            this.btnEkle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEkle.Name = "btnEkle";
+            this.btnEkle.Size = new System.Drawing.Size(162, 95);
+            this.btnEkle.TabIndex = 10;
+            this.btnEkle.Text = "EKLE";
+            this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
-            // button1
+            // mtBoxSatisFiyati
             // 
-            this.button1.Location = new System.Drawing.Point(156, 202);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(182, 77);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.mtBoxSatisFiyati.Font = new System.Drawing.Font("Verdana", 17F, System.Drawing.FontStyle.Bold);
+            this.mtBoxSatisFiyati.Location = new System.Drawing.Point(295, 141);
+            this.mtBoxSatisFiyati.Name = "mtBoxSatisFiyati";
+            this.mtBoxSatisFiyati.Size = new System.Drawing.Size(110, 42);
+            this.mtBoxSatisFiyati.TabIndex = 12;
+            this.mtBoxSatisFiyati.ValidatingType = typeof(int);
+            this.mtBoxSatisFiyati.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtBoxSatisFiyati_KeyPress);
             // 
             // icecekKayit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 313);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.tBoxSatisFiyati);
+            this.ClientSize = new System.Drawing.Size(706, 267);
+            this.Controls.Add(this.mtBoxSatisFiyati);
+            this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.tBoxIcecekAdi);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "icecekKayit";
             this.Text = "İÇECEK KAYIT";
             this.ResumeLayout(false);
@@ -108,8 +110,8 @@ namespace SokakLezzetleri
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tBoxIcecekAdi;
-        private System.Windows.Forms.TextBox tBoxSatisFiyati;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEkle;
+        private System.Windows.Forms.MaskedTextBox mtBoxSatisFiyati;
     }
 }
 

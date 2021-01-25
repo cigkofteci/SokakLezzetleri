@@ -34,6 +34,7 @@ namespace SokakLezzetleri
             this.tBoxIcecekAdi = new System.Windows.Forms.TextBox();
             this.btnEkle = new System.Windows.Forms.Button();
             this.mtBoxSatisFiyati = new System.Windows.Forms.MaskedTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -69,7 +70,7 @@ namespace SokakLezzetleri
             // 
             this.btnEkle.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnEkle.Location = new System.Drawing.Point(414, 124);
-            this.btnEkle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEkle.Margin = new System.Windows.Forms.Padding(4);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(162, 95);
             this.btnEkle.TabIndex = 10;
@@ -87,11 +88,22 @@ namespace SokakLezzetleri
             this.mtBoxSatisFiyati.ValidatingType = typeof(int);
             this.mtBoxSatisFiyati.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtBoxSatisFiyati_KeyPress);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(25, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(443, 20);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "EĞER İÇECEK KAYITLI DEĞİLSE KAYIT ETSİN";
+            // 
             // icecekKayit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(706, 267);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.mtBoxSatisFiyati);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.tBoxIcecekAdi);
@@ -112,6 +124,7 @@ namespace SokakLezzetleri
         private System.Windows.Forms.TextBox tBoxIcecekAdi;
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.MaskedTextBox mtBoxSatisFiyati;
+        private System.Windows.Forms.Label label3;
     }
 }
 

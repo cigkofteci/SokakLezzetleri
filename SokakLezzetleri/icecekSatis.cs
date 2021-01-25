@@ -17,11 +17,41 @@ namespace SokakLezzetleri
         {
             InitializeComponent();
 
-            //baglanti.Open();
+            icecekleriCek();
+
+            
+
         }
 
-        //SQLiteConnection baglanti = new SQLiteConnection("Data Source=database/SokakLezzetleri.db");
-        ////bag.Open(); // Bağlantıyı Açtık
+        string dbYolu = @"Data Source=E:\repos\SokakLezzetleri\SokakLezzetleri\database\SokakLezzetleri.db";
 
+        void icecekleriCek()
+        {
+            using (SQLiteConnection baglanti = new SQLiteConnection(dbYolu))
+            {
+                baglanti.Open();
+                using (SQLiteCommand komut = new SQLiteCommand("select * from icecek", baglanti))
+                {
+                    using (SQLiteDataAdapter da = new SQLiteDataAdapter(komut))
+                    {
+                        using (DataSet ds = new DataSet())
+                        {
+                            da.Fill(ds,"icecekler");
+                            dataGridView1.DataSource = ds.Tables["icecekler"];
+
+                            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                            {
+                                if (dataGridView1.Columns[i].HeaderText != "ad")
+                                {
+                                    dataGridView1.Columns[i].Visible = false;
+                                }
+                            }
+                            
+                            
+                        }
+                    }
+                }
+            }
+        }
     }
 }

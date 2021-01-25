@@ -32,7 +32,7 @@ namespace SokakLezzetleri
             }
         }
 
-        string dbYolu = @"Data Source=E:\repos\SokakLezzetleri\SokakLezzetleri\database\SokakLezzetleri.db";    // ('gazoz','2,5') 
+        string dbYolu = @"Data Source=E:\repos\SokakLezzetleri\SokakLezzetleri\database\SokakLezzetleri.db";
 
         private void btnEkle_Click(object sender, EventArgs e)
         {

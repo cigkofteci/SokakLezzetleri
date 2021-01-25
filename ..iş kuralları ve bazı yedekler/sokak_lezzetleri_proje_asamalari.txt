@@ -1,5 +1,5 @@
 içecek alim satımı gerçekleştirilecek{
-  içecek kayıt ekranı
+++  içecek kayıt ekranı
 ++  içecek stoğa ekleme ekranı// içecek satin alindiğinda
   içecek satiş ekranı
   //  içecegin görünürlüğü ayarlanabilmeli

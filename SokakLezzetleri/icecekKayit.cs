@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,11 +33,11 @@ namespace SokakLezzetleri
             }
         }
 
-        string dbYolu = @"Data Source=E:\repos\SokakLezzetleri\SokakLezzetleri\database\SokakLezzetleri.db";
+        string dbYolu = Path.GetDirectoryName(Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory())) + "\\database\\SokakLezzetleri.db";
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            using (SQLiteConnection baglanti = new SQLiteConnection(dbYolu))
+            using (SQLiteConnection baglanti = new SQLiteConnection("Data Source = " + dbYolu + ";Version=3;"))
             {
                 baglanti.Open();
 

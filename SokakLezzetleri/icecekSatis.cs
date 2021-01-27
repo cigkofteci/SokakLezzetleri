@@ -22,6 +22,7 @@ namespace SokakLezzetleri
 
             
 
+
         }
 
         string dbYolu = Path.GetDirectoryName(Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory())) + "\\database\\SokakLezzetleri.db";
@@ -33,26 +34,16 @@ namespace SokakLezzetleri
                 baglanti.Open();
                 using (SQLiteCommand komut = new SQLiteCommand("select * from icecek", baglanti))
                 {
-                    using (SQLiteDataAdapter da = new SQLiteDataAdapter(komut))
+                    using (SQLiteDataReader read = komut.ExecuteReader())
                     {
-                        using (DataSet ds = new DataSet())
+                        while (read.Read())
                         {
-                            da.Fill(ds,"icecekler");
-                            dataGridView1.DataSource = ds.Tables["icecekler"];
-
-                            for (int i = 0; i < dataGridView1.Columns.Count; i++)
-                            {
-                                if (dataGridView1.Columns[i].HeaderText != "ad")
-                                {
-                                    dataGridView1.Columns[i].Visible = false;
-                                }
-                            }
-                            
-                            
+                            listBox1.Items.Add(read["ad"]);
                         }
                     }
                 }
             }
         }
+
     }
 }
